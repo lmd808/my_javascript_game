@@ -1,0 +1,27 @@
+body {
+	background-image: url(../images/main_images/gyard.gif);
+	background-size: cover;
+	/*background-position: center; */
+	font-family: 'Source Code Pro', monospace;
+	color: #fff;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.container {
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 30px;
+	margin-top: 40px;
+}
+
+#currentWord {
+	padding: 20px;
+	margin: 10px;
+}
+
+footer {
+	margin-bottom: -200px;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+	margin-top: 150px;
+}

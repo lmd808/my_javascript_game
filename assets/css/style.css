@@ -11,7 +11,7 @@ body {
 .container {
 	background-color: rgba(0, 0, 0, 0.7);
 	padding: 30px;
-	margin-top: 40px;
+	margin-top: 20px;
 }
 .cont2 {
 	padding: 30px;
@@ -27,6 +27,9 @@ body {
 #currentWordToGuess {
 	padding: 20px;
 	margin: 10px;
+}
+#playerName {
+	padding-bottom: 10px;
 }
 
 footer {

@@ -30,7 +30,16 @@ let myGame = {
 	blanks: 0,
 	blankxCorrect: [],
 	wrongGuess: [],
-
+	// my playr prompt function
+	playerName: function(name) {
+		// here i ask for the players name
+		if ((name = prompt('What is your Name?'))) {
+			// the name is then printed to the webpage
+			document.getElementById('playerName').innerHTML = `${name}'s Stats:`;
+		} else {
+			document.getElementById('playerName').innerHTML = `Player Stats:`;
+		}
+	},
 	// my first function - game
 	Game: function() {
 		//first im gonna get a random word from my array up top
@@ -137,6 +146,7 @@ let myGame = {
 };
 
 //call game function
+myGame.playerName();
 myGame.Game();
 
 // trigger event to cause the game to start

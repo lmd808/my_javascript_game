@@ -112,9 +112,10 @@ let myGame = {
 			// issue- my screen doesn't display the last correct key entered I need to gfigure that out
 			// winner winner section
 			this.wins++;
+			this.reset();
 			document.getElementById('image').src = './assets/images/main_images/happy_ghost.gif';
 			// i need to figure out how to delay the reset
-			this.reset();
+			// this.reset();
 
 			//put them wins on the screen bb
 			document.getElementById('winCount').innerHTML = ' ' + this.wins;
@@ -127,7 +128,7 @@ let myGame = {
 			document.getElementById('image').src = './assets/images/main_images/died.jpg';
 			document.getElementById('lossCount').innerHTML = ' ' + this.losses;
 		}
-		//display losses on screen && guesses remaining countdown
+		// thie two lines will show my guesses on screen
 		document.getElementById('currentWordToGuess').innerHTML = ' ' + this.blankxCorrect.join(' ');
 		document.getElementById('guessesLeft').innerHTML = ' ' + this.guessesLeft;
 
@@ -135,20 +136,21 @@ let myGame = {
 	}
 };
 
-//call start game function
+//call game function
 myGame.Game();
 
-//check for keyup, and convert to lowercase then store in guesses
+// trigger event to cause the game to start
 document.onkeyup = function(event) {
 	var guesses = String.fromCharCode(event.keyCode).toLowerCase();
-	//check to see if guess entered matches value of random word
+	//check to see if guess entered values of random word
 	myGame.checkLetters(guesses);
-	//process wins/loss
+	//handle the wins and losses
 	myGame.EndOfDisaster();
-	//store player guess in console for reference
+
+	//logs guesses and random word for me i'll probably get rid of this later
 	console.log(guesses);
 	console.log(randomWord);
 
-	//display/store incorrect letters on screen
+	// this line displauys the wrong player guesses in the player guess screen
 	document.getElementById('playerWrongGuesses').innerHTML = ' ' + myGame.wrongGuess.join(' ');
 };

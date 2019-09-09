@@ -9,7 +9,8 @@
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- font that i like  -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet"> 
+  <!-- <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">  -->
+  <link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css" charset="utf-8" /> 
   <!-- last but not least my actual style sheet -->
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Spooky Word Guess</title>
@@ -28,14 +29,17 @@
       <div class="col-sm-12 justify-content-center">
         <div class="row justify-content-center">
           <div class="col-sm-12 justify-content-center">
-            <h2>Press any Letter to Start Guessing</h2>
+            <!-- <h2>Press any Letter to Start Guessing</h2> -->
           </div>
         </div>
         <div class="row justify-content-center">
           <!-- I want this image to switch out with each win and loss and reset to this image below at reset -->
           <!--  download spooky scary skeletons and comming to take me away audio -->
-          <img id="image" src="assets/images/main_images/eyes.gif" alt="image of a graveyard"> 
-          <span id="image-text"></span>
+          <div class="col-sm-12">
+            <img id="image" src="assets/images/main_images/smile.gif" alt="a face">  
+            <h3 id="image-text">Press Any Button to Begin</h3>
+          </div>       
+          
         </div>
         <!-- below is where the current word will be displayed  -->
         <div class="row justify-content-center">

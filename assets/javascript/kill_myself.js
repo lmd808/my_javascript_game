@@ -113,7 +113,7 @@ let myGame = {
 			// winner winner section
 			this.wins++;
 			this.reset();
-			document.getElementById('image').src = './assets/images/main_images/happy_ghost.gif';
+			document.getElementById('image').src = './assets/images/main_images/tryagain.jpg';
 			// i need to figure out how to delay the reset
 			// this.reset();
 
@@ -125,7 +125,7 @@ let myGame = {
 		} else if (this.guessesLeft === 0) {
 			this.losses++;
 			this.reset();
-			document.getElementById('image').src = './assets/images/main_images/died.jpg';
+			document.getElementById('image').src = './assets/images/main_images/youlose.jpg';
 			document.getElementById('lossCount').innerHTML = ' ' + this.losses;
 		}
 		// thie two lines will show my guesses on screen

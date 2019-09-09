@@ -2,7 +2,7 @@ body {
 	background-image: url(../images/main_images/gyard.gif);
 	background-size: cover;
 	/*background-position: center; */
-	font-family: 'Source Code Pro', monospace;
+	/* font-family: 'Source Code Pro', monospace; */
 	color: #fff;
 	margin: 0 auto;
 	text-align: center;
@@ -16,10 +16,12 @@ body {
 .cont2 {
 	padding: 30px;
 }
+
 #image {
 	width: 400px;
-	height: 200px;
-	border-radius: 80px;
+	height: 300px;
+	border-radius: 180px;
+	padding: 15px;
 }
 
 #currentWordToGuess {

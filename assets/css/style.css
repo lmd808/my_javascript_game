@@ -13,8 +13,16 @@ body {
 	padding: 30px;
 	margin-top: 40px;
 }
+.cont2 {
+	padding: 30px;
+}
+#image {
+	width: 400px;
+	height: 200px;
+	border-radius: 80px;
+}
 
-#currentWord {
+#currentWordToGuess {
 	padding: 20px;
 	margin: 10px;
 }

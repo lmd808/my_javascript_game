@@ -124,7 +124,7 @@ let myGame = {
 			// winner winner section
 			this.wins++;
 			this.reset();
-			document.getElementById('image').src = './assets/images/main_images/life.jpg';
+			document.getElementById('image-text').textContent = 'Winner Winner fresh corpse for Dinner!';
 			// i need to figure out how to delay the reset
 			// this.reset();
 
@@ -136,7 +136,7 @@ let myGame = {
 		} else if (this.guessesLeft === 0) {
 			this.losses++;
 			this.reset();
-			document.getElementById('image').src = './assets/images/main_images/death.jpg';
+			document.getElementById('image-text').textContent = 'Loser in Life Loser in Death';
 			document.getElementById('lossCount').innerHTML = ' ' + this.losses;
 		}
 		// thie two lines will show my guesses on screen
@@ -171,3 +171,5 @@ document.onkeyup = function(event) {
 // future goals
 // i want to take the username input from the playerName function and get it to appear on a blank tombstone image
 // followed by some sick disses
+
+// i want to

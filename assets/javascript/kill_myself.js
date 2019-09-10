@@ -1,3 +1,5 @@
+alert("You're going to want to scroll down and hit play on the audio. It sets the mood");
+// i did my code outside of an object first and then refactored it into an object. the object works mentally better for me
 let myGame = {
 	// below ids my array of words
 	myWords: [
@@ -30,7 +32,7 @@ let myGame = {
 	blanks: 0,
 	blankxCorrect: [],
 	wrongGuess: [],
-	// my playr prompt function
+	// my player prompt function
 	playerName: function(name) {
 		// here i ask for the players name
 		if ((name = prompt('What is your Name?'))) {
@@ -106,14 +108,14 @@ let myGame = {
 		}
 	},
 	// resets my game
-	// i need to figure out how to delay this so people can see my inage change
+	// i need to figure out how to delay this so people can see my image change
 
 	reset: function() {
 		this.guessesLeft = 9;
 		this.wrongGuess = [];
 		this.blankxCorrect = [];
 		this.Game();
-		document.getElementById('image').src = './assets/images/main_images/eyes.gif';
+		document.getElementById('image').src = './assets/images/main_images/smile.gif';
 	},
 	EndOfDisaster: function() {
 		// if my strings are the same then the person wins (yee fuckin haw)
@@ -122,7 +124,7 @@ let myGame = {
 			// winner winner section
 			this.wins++;
 			this.reset();
-			document.getElementById('image').src = './assets/images/main_images/tryagain.jpg';
+			document.getElementById('image').src = './assets/images/main_images/life.jpg';
 			// i need to figure out how to delay the reset
 			// this.reset();
 
@@ -134,7 +136,7 @@ let myGame = {
 		} else if (this.guessesLeft === 0) {
 			this.losses++;
 			this.reset();
-			document.getElementById('image').src = './assets/images/main_images/youlose.jpg';
+			document.getElementById('image').src = './assets/images/main_images/death.jpg';
 			document.getElementById('lossCount').innerHTML = ' ' + this.losses;
 		}
 		// thie two lines will show my guesses on screen
@@ -151,6 +153,7 @@ myGame.Game();
 
 // trigger event to cause the game to start
 document.onkeyup = function(event) {
+	// this makes sure only lowercase letters are being processed from their guesses
 	var guesses = String.fromCharCode(event.keyCode).toLowerCase();
 	//check to see if guess entered values of random word
 	myGame.checkLetters(guesses);
@@ -161,6 +164,10 @@ document.onkeyup = function(event) {
 	console.log(guesses);
 	console.log(randomWord);
 
-	// this line displauys the wrong player guesses in the player guess screen
+	// this line displays the wrong player guesses in the player guess screen
 	document.getElementById('playerWrongGuesses').innerHTML = ' ' + myGame.wrongGuess.join(' ');
 };
+
+// future goals
+// i want to take the username input from the playerName function and get it to appear on a blank tombstone image
+// followed by some sick disses

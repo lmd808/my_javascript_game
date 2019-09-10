@@ -23,7 +23,7 @@
   <div class="container">
     <!-- below is my heading area -->
     <div class="row Heading justify-content-center">
-      <h1>Spooky Season Word Guess</h1>
+      <h1 class="/glow">Spooky Season Word Guess</h1>
     </div>
     <!-- below is where my actual game will rest -->
     <div class="row">
@@ -37,39 +37,45 @@
           <!-- I want this image to switch out with each win and loss and reset to this image below at reset -->
           <!--  download spooky scary skeletons and comming to take me away audio -->
           <div class="col-sm-12">
+            <div id="tombstone">
+              <span id="name"></span>
+              <span id="roast"></span>
+              <span id="date"></span>
+            
             <img id="image" src="assets/images/main_images/smile.gif" alt="a face">  
-            <h3 id="image-text">Press Any Button to Begin</h3>
+            <h5 id="image-text" class="glow">Press Any Button to Begin</h5>
+            </div>
           </div>       
           
         </div>
         <!-- below is where the current word will be displayed  -->
         <div class="row justify-content-center">
           <div class="col-sm-12 justify-content-center">
-            <h3 id="currentWordToGuess"></h3>
+            <h3 id="currentWordToGuess" class="glow"></h3>
           </div>  
         </div>
         <div class="row justify-content-center">
-          <h3 id="playerName"></h3>
+          <h3 id="playerName" class="/glow"></h3>
         </div>
         <div class="row justify-content-center">
           <!-- below is where I will display my huesses left -->
           <div class="col-sm-3 justify-content-center">
-            <h3>Guesses Left:</h3>
+            <h4 class="/glow">Guesses Left:</h3>
             <span id="guessesLeft"></span>
           </div>
           <!-- below is where is will have my win counter  -->
           <div class="col-sm-3 justify-content-center">
-            <h3>Wins:</h3>
+            <h4 class="/glow">Wins:</h3>
             <span id="winCount"></span>
           </div>
           <!-- below is where I will have my loss Tracker -->
           <div class="col-sm-3 justify-content-center">
-            <h3>Losses:</h3>
+            <h4 class="/glow">Losses:</h3>
             <span id="lossCount"></span>
           </div>
           <!-- below is where I will dipslay letters already guessed -->
           <div class="col-sm-3 justify-content-center">
-            <h3>Guesses:</h3>
+            <h4 class="/glow">Guesses:</h3>
             <span id="playerWrongGuesses"></span>
           </div>
         </div>  

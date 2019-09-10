@@ -19,8 +19,12 @@ let myGame = {
 		'monsters',
 		'candy',
 		'spooky',
-		'black-cat',
-		'candy-corn'
+		'black cat',
+		'candy corn',
+		'zombie',
+		'haunting',
+		'possession',
+		'death'
 	],
 	// going to get these to push a value to the id's i have on my page
 	wins: 0,
